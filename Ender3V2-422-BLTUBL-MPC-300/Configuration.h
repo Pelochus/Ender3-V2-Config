@@ -1239,7 +1239,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender Configs
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 139 }  // Ender Configs
 
 #define LIMITED_MAX_STEPS_EDITING
 #if ENABLED(LIMITED_MAX_STEPS_EDITING)
@@ -1251,7 +1251,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 45 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 25, 100 }
 
 #define DEFAULT_FEEDRATE_MM_M (50*60)
 
@@ -1266,7 +1266,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 1000 }  // Ender Configs
+#define DEFAULT_MAX_ACCELERATION      { 2500, 2500, 200, 3000 }  // Ender Configs
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2  // MRiscoC allows higher limits
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1281,9 +1281,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves  // Ender Configs
-#define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts  // Ender Configs
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves  // Ender Configs
+#define DEFAULT_ACCELERATION          750    // X, Y, Z and E acceleration for printing moves  // Ender Configs
+#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts  // Ender Configs
+#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves  // Ender Configs
 
 /**
  * Default Jerk limits (mm/s)
@@ -1576,7 +1576,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41.5, -7, 0 }  // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
+#define NOZZLE_TO_PROBE_OFFSET { -42.0, -10, 0 }  // Pelochus BLTouch offset for support: https://www.thingiverse.com/thing:4462870 (z-offset = -1.80 mm)
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1825,7 +1825,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 248  // MRiscoC Stock physical limit
 #define Y_MAX_POS 231  // MRiscoC Stock physical limit
-#define Z_MAX_POS 250  // Ender Configs
+#define Z_MAX_POS 220  // Pelochus Ender limit
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -2391,32 +2391,32 @@
 //
 // Preheat Constants - Up to 10 are supported without changes
 //
-#define PREHEAT_1_LABEL       "Warmup"
-#define PREHEAT_1_TEMP_HOTEND 160
-#define PREHEAT_1_TEMP_BED     50
-#define PREHEAT_1_FAN_SPEED   128
+#define PREHEAT_1_LABEL       "PLA"
+#define PREHEAT_1_TEMP_HOTEND 190
+#define PREHEAT_1_TEMP_BED     55
+#define PREHEAT_1_TEMP_CHAMBER 35
+#define PREHEAT_1_FAN_SPEED     200 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "PLA"
-#define PREHEAT_2_TEMP_HOTEND 190
-#define PREHEAT_2_TEMP_BED     55
+#define PREHEAT_2_LABEL       "ABS"
+#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_BED     80
 #define PREHEAT_2_TEMP_CHAMBER 35
-#define PREHEAT_2_FAN_SPEED     200 // Value from 0 to 255
+#define PREHEAT_2_FAN_SPEED     128 // Value from 0 to 255
 
-#define PREHEAT_3_LABEL       "ABS"
-#define PREHEAT_3_TEMP_HOTEND 230
-#define PREHEAT_3_TEMP_BED     80
-#define PREHEAT_3_TEMP_CHAMBER 35
-#define PREHEAT_3_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_3_LABEL       "PETG"
+#define PREHEAT_3_TEMP_HOTEND 210
+#define PREHEAT_3_TEMP_BED     65
+#define PREHEAT_3_FAN_SPEED   128
 
-#define PREHEAT_4_LABEL       "PETG"
-#define PREHEAT_4_TEMP_HOTEND 210
-#define PREHEAT_4_TEMP_BED     65
-#define PREHEAT_4_FAN_SPEED   128
+#define PREHEAT_4_LABEL       "TPU"
+#define PREHEAT_4_TEMP_HOTEND 200
+#define PREHEAT_4_TEMP_BED     55
+#define PREHEAT_4_FAN_SPEED   200
 
-#define PREHEAT_5_LABEL       "TPU"
-#define PREHEAT_5_TEMP_HOTEND 200
-#define PREHEAT_5_TEMP_BED     55
-#define PREHEAT_5_FAN_SPEED   200
+#define PREHEAT_5_LABEL       "Warmup"
+#define PREHEAT_5_TEMP_HOTEND 160
+#define PREHEAT_5_TEMP_BED     50
+#define PREHEAT_5_FAN_SPEED   128
 
 #define PREHEAT_6_LABEL       "Custom"
 #define PREHEAT_6_TEMP_HOTEND 200

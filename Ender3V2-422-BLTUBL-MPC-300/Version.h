@@ -37,7 +37,7 @@
 #if ENABLED(IS_DEMO)
   #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " DEMO, NOT FOR PRODUCTION"
 #else
-  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION " Ender3V2-422-BLTUBL-MPC-300, based on bugfix-2.1.x"
+  #define DETAILED_BUILD_VERSION SHORT_BUILD_VERSION "Ender3V2-422-BLTUBL-MPC-300, based on bugfix-2.1.x"
 #endif
 
 /**
@@ -72,7 +72,7 @@
  * The WEBSITE_URL is the location where users can get more information such as
  * documentation about a specific Marlin release.
  */
-#define WEBSITE_URL "https://github.com/Pelochus/Ender3-V2-Config/README.md"
+#define WEBSITE_URL "github.com/Pelochus/Ender3-V2-Config/README.md"
 
 /**
  * Set the vendor info the serial USB interface, if changable
