@@ -36,3 +36,6 @@ Follow the guide in the [Special_Configurations](https://github.com/mriscoc/Spec
 - Flash to the printer: Turn off printer and insert SD card with only .bin file with a specific name (cannot be something already used before for updating)
 - ???
 - Profit
+
+## Credits
+To the Marlin team and [@mriscoc](https://github.com/mriscoc)
