@@ -18,6 +18,7 @@ Follow the guide in the [Special_Configurations](https://github.com/mriscoc/Spec
 - Press Set config and Generate
 - Use the config in the photo above
 - Now add extra config to the ```Configuration.h```, ```Configuration_adv.h``` and ```Version.h``` files. See example in this repo
+- In ```platformio.ini``` file, use ```STM32F103RE_creality```, since I checked that I have the 512 kB STM (the RC is the 256 kB flash). This step is also mentioned in the original README in Special_Configurations repo
 - Clone this [repo](https://github.com/mriscoc/Ender3V2S1/tree/Ender3V2S1-Released) and change the previous file
 - Compile using PlatformIO and Auto Build for Marlin extensions for VSCode
 - For this step, you can check any guide for compiling Marlin online
