@@ -1,8 +1,8 @@
 # Ender 3 V2 Config
 Marlin configuration for my Ender 3 V2 based on these repositories by @mriscoc
 
-https://github.com/mriscoc/Ender3V2S1/tree/Ender3V2S1-Released
-https://github.com/mriscoc/Special_Configurations
+- https://github.com/mriscoc/Ender3V2S1/tree/Ender3V2S1-Released
+- https://github.com/mriscoc/Special_Configurations
 
 My additions (new for V1.1):
 - **New:** Changed default max Z and Extruder speeds from 10 to 20 and 45 to 100 mm/s respectively
