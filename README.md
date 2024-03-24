@@ -25,7 +25,7 @@ https://github.com/Pelochus/Ender3-V2-Config/releases/latest
 ## Procedure
 Follow the guide in the [Special_Configurations](https://github.com/mriscoc/Special_Configurations) repo by @mriscoc. In short:
 - Clone this repo after syncing it to the original fork (or clone the original)
-- With pythonw, execute ```Configurator.pyw```: ```pythonw Configurator.pyw```
+- With pythonw, execute ```Configurator.pyw``` with ```pythonw Configurator.pyw```
 - Press Set config and Generate
 - Use the config in the photo above
 - Now add extra config to the ```Configuration.h```, ```Configuration_adv.h``` and ```Version.h``` files. See example in this repo
